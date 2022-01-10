@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+## hospedar un proyecto react en firebase 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Creamos una aplicación de react
+   --> npx create-react-app
+   nota: tener actualizdo node y npm (en caso de utilizar npm)
 
-## Available Scripts
+2. Creamos un nuevo proyecto en firebase
+   ---> https://firebase.google.com
 
-In the project directory, you can run:
+3. En el panel de firebase (compilación), seleccionamos hosting
 
-### `npm start`
+4. En nuestra terminal, ingresamos los siguientes comandos:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## para instalar Firebase CLI
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+--> Firebase CLI es una herramienta de línea de comandos
 
-### `npm test`
+** npm install -g firebase-tools
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Una vez instaladas las herramientas, debemos iniciar sesión con una cuenta Google, para esto, debemos escribir el siguiente comando: 
 
-### `npm run build`
+** firebase login
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Después de acceder e iniciar sesión con nuestra cuenta google, debemos iniciar el proyecto con el siguiente comando:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+** firebase init
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Una vez ejecutado el comando, veremos una serie de preguntas como:
 
-### `npm run eject`
+ --> Are you ready to proceed? (Y/n)
+  ** Si indicamos si: (y)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---> Veremos que servicios deseamos incluir en el proyecto:
+** seleccionamos la opción que necesitamos, si el caso es solo hospedaje, seleccionamos:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+(*) Hosting: Configure files for firebase hosting and (optionally) set up Github Action deploys
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Una vez finalizado este paso, encontraremos esta pregunta:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+--> but for now we'll just set up a default project.
 
-## Learn More
+? please select an option
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> use an existing project
+> create a new project
+> add firebase to an existing cloud platform project
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+--> Si ya tenemos un proyecto de firebase creado desde la plataforma, seleccionaremos la primera opción. De lo contrario, seleccionamos crear uno nuevo.
 
-### Code Splitting
+Por ultimo:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+? what do you want to use your public directory?
 
-### Analyzing the Bundle Size
+--> como estamos trabajando con react, debemos especificar la carpeta (build)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+LLevando a cabo todos estos pasos, veremos que se ha creado una carpeta build, donde estarán los recursos react optimizados.
 
-### Making a Progressive Web App
+---> por último debemos hacer el deploy
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+con el siguiente comando:
+** firebase deploy
 
-### Advanced Configuration
+--> lo que sucederá es que firebase tomara el contenido de build, lo va a cargar y lo hospedará, podremos ver los enlaces de hospedaje en la terminal.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
++ Deploy complete!
 
-### Deployment
+## Project console: link
+## Hosting URL: link
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
